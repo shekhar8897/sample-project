@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="eng" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    
+    <title>Sample</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    
+    <style>
+        .me{
+            background: url("./img/education.jpg");
+             width: 100%;
+            height: 90vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            }
+    </style> 
+   
+</head>
+
+<body class="me">
+        <nav class="navbar navbar-expand-lg navbar-grey bg-grey" style="box-shadow: none;">
+            <a class="navbar-brand" >Sample</a>
+                   
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/" >Home <span class="sr-only">(current)</span></a></li>
+                </ul>
+                <span class="navbar-text">
+                    <ul class="nav-menu">
+                        {{#if user}}
+                            <a href="/myaccount">
+                            
+                                {{user.username}}
+                                {{user.google.username}}
+                                {{user.facebook.name}}
+                            </a>
+                        &nbsp;
+                            <a href="/logout"><button class="btn btn-info btn-raised my-2 my-sm-0" type="submit" >Logout</button></a>
+                        {{else}}
+                            <a href="/signup"><button class="btn btn-primary btn-raised my-2 my-sm-0" type="submit">Signup</button></a>
+                            <a href="/login"><button class="btn btn-info btn-raised my-2 my-sm-0" type="submit">Login</button></a>
+                        {{/if}}
+                    </ul>
+                </span>
+            </div>
+        </nav>
+                    <center>
+                        <div class="col-md-6">
+                            {{#if success_msg}}
+                            <div class="alert alert-success">{{success_msg}}</div>
+                            {{/if}} {{#if error_msg}}
+                            <div class="alert alert-success">{{error_msg}}</div>
+                            {{/if}} {{#if error}}
+                            <div class="alert alert-success">{{error}}</div>
+                            {{/if}}
+                        </div>
+                    </center>
+                    <section class="main">
+                        {{{body}}}
+                    </section>
+    
+     
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+        
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+</body>
+</html>

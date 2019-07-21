@@ -1,0 +1,35 @@
+
+<button type="button" class="btn btn-danger btn-raised" data-toggle="modal" data-target="#id" style="margin-top:55vh;margin-left:8vw;">
+   Click to see details
+</button>
+<div class="modal fade" id="id" tabindex="-1" role="dialog" aria-labelledby="check"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="check">The data is:-</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <center>
+                            <span class="text">
+                                <h4>Name:</h4>
+                                <h4>Email:</h4>
+                            </span>
+                        </center> 
+                    </div>
+                    <div class="col-md-9">
+                        <span class="text">
+                            <h5>{{user.google.username}}{{user.facebook.id}}{{user.username}}</h5>
+                            <h5>{{user.google.email}}{{user.email}}</h5>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

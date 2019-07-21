@@ -1,0 +1,80 @@
+<br>
+									
+{{#if errors}} 
+	{{#each errors}}
+		<div class="alert alert-danger">{{msg}}</div>
+	{{/each}}
+{{/if}}
+
+<center>
+	<div class="col-md-6 card">
+		<br>
+		<a>
+			<h3>Sign up </h3>
+		</a>
+		<br>
+	<form class="form-signup" method="post" action="/signup">	
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="firstname">First Name</label>
+						<input type="text" class="form-control" id="firstname" name="firstname" required>
+			
+					</div>
+					
+					<div class="form-group">
+						<label for="username">Username:</label>
+						<input type="text" class="form-control" id="username" name="username">
+					</div>
+					<div class="form-group">
+						<label for="mob">Mobile No:</label>
+						<input type="number" class="form-control" id="mobile" name="mobile">
+					</div>
+					<div class="form-group">
+						<label for="email">Email Id:</label>
+						<input type="email" class="form-control" id="email" name="email">
+					</div>
+										<br>
+					
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="lastname">Last Name</label>
+						<input type="text" class="form-control" id="lastname" name="lastname" required>
+					</div>
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" id="pwd" name="password">
+					</div>
+					<div class="form-group">
+						<label for="date">Date of birth:</label>
+						<input type="date" class="form-control" id="date" name="dateofbirth" required>
+					</div>
+
+				</div>			
+			</div>
+			<button type="submit" class="btn btn-raised btn-primary">Signup</button>
+		</form>
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<a href="/auth/google">
+					<button type="submit" class="btn btn-raised btn-danger">Signup with Google</button>
+				</a>
+			</div>
+			<div class="col-md-6">
+				<a href="/auth/facebook">
+					<button type="submit" class="btn btn-raised btn-info">Signup with Facebook</button>
+				</a>
+			</div>
+		</div>
+		<br>
+		<br>
+	</div>
+
+</center>
+								
+	
+												
+												
+									
